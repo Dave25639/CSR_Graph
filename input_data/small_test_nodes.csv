@@ -1,0 +1,12 @@
+~id,~label,type:string,code:string,icao:string,desc:string,region:string,runways:int,longest:int,elev:int,country:string,city:string,lat:double,lon:double,author:string,date:string
+0,version,version,0.89,,Air Routes Data - Version: 0.89 Generated: 2022-08-29 14:10:18 UTC; Graph created by Kelvin R. Lawrence; Please let me know of any errors you find in the graph or routes that should be added.,,,,,,,,,Kelvin R. Lawrence,2022-08-29 14:10:18 UTC
+1,airport,airport,ATL,KATL,Hartsfield - Jackson Atlanta International Airport,US-GA,5,12390,1026,US,Atlanta,33.63669968,-84.42810059,,
+2,airport,airport,ANC,PANC,Anchorage Ted Stevens,US-AK,3,12400,151,US,Anchorage,61.17440033,-149.9960022,,
+3,airport,airport,AUS,KAUS,Austin Bergstrom International Airport,US-TX,2,12250,542,US,Austin,30.19449997,-97.66989899,,
+4,airport,airport,BNA,KBNA,Nashville International Airport,US-TN,4,11030,599,US,Nashville,36.12450027,-86.67819977,,
+5,airport,airport,BOS,KBOS,Boston Logan,US-MA,6,10083,19,US,Boston,42.36429977,-71.00520325,,
+6,airport,airport,BWI,KBWI,Baltimore/Washington International Airport,US-MD,3,10502,143,US,Baltimore,39.17539978,-76.66829681,,
+7,airport,airport,DCA,KDCA,Ronald Reagan Washington National Airport,US-DC,3,7169,14,US,Washington D.C.,38.85210037,-77.03769684,,
+8,airport,airport,DFW,KDFW,Dallas/Fort Worth International Airport,US-TX,7,13401,607,US,Dallas,32.89680099,-97.03800201,,
+9,airport,airport,FLL,KFLL,Fort Lauderdale/Hollywood International Airport,US-FL,2,9000,64,US,Fort Lauderdale,26.07259941,-80.15270233,,
+10,airport,airport,IAD,KIAD,Washington Dulles International Airport,US-VA,4,11500,313,US,Washington D.C.,38.94449997,-77.45580292,,
