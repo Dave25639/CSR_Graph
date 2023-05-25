@@ -1,5 +1,7 @@
 package src.CSR_Graph;
 
+import java.util.Arrays;
+
 public class driver {
 
     public static void main(String[] args) {
@@ -11,26 +13,35 @@ public class driver {
         int[] n = g.getNodes();
         int[] e = g.getEdges();
         int[] d = g.getEdge_distances();
+        String[][] a = g.getAirport_information();
 
-        printArray("NODES", n);
-        printArray("EDGES", e);
-        printArray("DISTANCES", d);
+        printArray("NODES", castArray(n));
+        printArray("EDGES", castArray(e));
+        printArray("DISTANCES", castArray(d));
+        print2DArray("Airport Information", a);
         //_____DEBUG DATA ARRAYS END_____
 
         //____DEBUG getAirportEdges START_____
         Pair p = g.getAirportEdges(5);
-        for (int i = p.first; i < p.second; i++){
-            System.out.print(e[i] + ", ");
-        }
-        System.out.println("");
-        if(p.first == p.second){
-            System.out.println("No edges found for airport_id.");
-        }
+        g.printAirportEdges(5);
         //____DEBUG getAirportEdges END_____
+
+        //_____DEBUG GraphAlgorithms START_____//
+        GraphAlgorithms algos = new GraphAlgorithms();
+        boolean found = algos.BFS(g, 1, 10);
+        if(found){
+            System.out.println("Found node.");
+        } else{
+            System.out.println("Did not find node.");
+        }
+        //_____DEBUG GraphAlgorithms END_____//
     }
 
-    public static void printArray(String name, int[] a){ // Debugging function used to print arrays beautifully.
-        System.out.print(name + " [");
+    public static <T> void printArray(String name, T[] a){ // Debugging function used to print arrays beautifully.
+        System.out.print(name + ": ");
+        System.out.println(Arrays.toString(a));
+
+        /*System.out.print(name + " [");
         for (int i = 0; i < a.length; i++){
             if(i != a.length-1){
                 System.out.print(a[i] + ", ");
@@ -39,6 +50,21 @@ public class driver {
                 System.out.print(a[i]);
             }
         }
-        System.out.println("]");
+        System.out.println("]");*/
+    }
+
+    public static <T> void print2DArray(String name, T[][] a) {
+        System.out.println(name + ":");
+        for (T[] r : a) {
+            System.out.println(Arrays.toString(r));
+        }
+    }
+
+    public static Integer[] castArray(int[] array) {
+        Integer[] intArr = new Integer[array.length];
+        for (int i = 0; i < array.length; i++) {
+            intArr[i] = array[i];
+        }
+        return intArr;
     }
 }
